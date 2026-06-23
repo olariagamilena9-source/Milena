@@ -1,23 +1,15 @@
-matriz = []
-numero = 1
-
-for i in range(4):
-    fila = []
-    for j in range(4):
-        fila.append(numero)
-        numero += 1
-    matriz.append(fila)
-
-print("Matriz:")
-for fila in matriz:
-    print(fila)
-
 suma = 0
-multiplicacion = 1
+mult = 1
+M = [[1,2,3,4],
+     [5,6,7,8],
+     [9,10,11,12],
+     [13,14,15,16]]
 
 for i in range(4):
-    suma += matriz[i][i]
-    multiplicacion *= matriz[i][i]
-
-print("\nSuma de la diagonal:", suma)
-print("Multiplicación de la diagonal:", multiplicacion)
+    for j in range(4):
+        if(i==j):
+            suma = suma+M[i][j]
+            mult = mult*M[i][j]
+            
+print("La suma es", suma)
+print("La multiplicación es", mult)
